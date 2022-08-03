@@ -19,6 +19,8 @@ postMerge :
             command:
               - node --version 
         configFile : "./jest.config.js"
+        parallelism: 2
+        splitMode: file
       
         
       - name: hoppscotch-cli      
@@ -37,6 +39,8 @@ postMerge :
             command:
               - node --version 
         configFile : "./jest.config.ts"
+        parallelism: 3
+        splitMode: file
        
         
       - name: hoppscotch-js-sandbox     
@@ -51,6 +55,7 @@ postMerge :
             command:
               - node --version 
         configFile : "./jest.config.js" 
+        parallelism: 2
         
         
         
@@ -95,5 +100,4 @@ preMerge :
 version : 2.0.0
 nodeVersion: 16.15.0
 tier: medium
-parallelism: 2
 #test3
